@@ -76,12 +76,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   head: () => ({
     meta: [
       { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      {
+        name: "viewport",
+        content:
+          "width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover",
+      },
+      { title: "STARFALL · Space Expedition" },
+      {
+        name: "description",
+        content:
+          "STARFALL — a 3D space expedition. Five missions, a jetpack and a world among the stars.",
+      },
+      { property: "og:title", content: "STARFALL · Space Expedition" },
+      {
+        property: "og:description",
+        content: "Five lost sectors. One last astronaut. Find the way home.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
