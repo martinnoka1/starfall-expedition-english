@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "stylesheet", href: "/starfall/style.css?v=2" },
+      { rel: "stylesheet", href: "/starfall/style.css?v=3" },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap",
@@ -39,7 +39,7 @@ function Starfall() {
     const s = document.createElement("script");
     s.type = "module";
     s.id = "starfall-engine";
-    s.src = "/starfall/game.js?v=2";
+    s.src = "/starfall/game.js?v=3";
     document.body.appendChild(s);
 
     return () => {
@@ -55,14 +55,11 @@ function Starfall() {
       <header>
         <a className="brand" href="#" id="home">
           ✦ <span>STARFALL</span>
-          <small>SECOND SIGNAL</small>
+          <small>CREW UPDATE</small>
         </a>
         <div className="tools">
-          <button id="sound" aria-label="Turn sound on">
-            Sound: off
-          </button>
-          <button id="quality" aria-label="Graphics quality">
-            Graphics: Auto
+          <button id="settings" aria-label="Settings">
+            ⚙
           </button>
           <button id="pause" aria-label="Pause">
             Ⅱ
@@ -115,8 +112,15 @@ function Starfall() {
             <b id="shieldstatus">READY</b>
           </div>
         </div>
-        <aside className="radar">
-          <span>ORBITAL MAP</span>
+        <aside className="radar" id="radar">
+          <button
+            id="maptoggle"
+            aria-expanded="true"
+            aria-controls="minimap"
+            aria-label="Show or hide map"
+          >
+            MAP −
+          </button>
           <canvas id="minimap" width={200} height={220} />
           <small>● you &nbsp; ◆ core &nbsp; ◇ relic</small>
         </aside>
@@ -133,7 +137,7 @@ function Starfall() {
       <main id="menu" className="overlay">
         <div className="intro">
           <div className="eyebrow">
-            <i /> SECOND SIGNAL · EXPEDITION 02
+            <i /> STARFALL · THE CREW
           </div>
           <h1>
             The cosmos
@@ -171,6 +175,10 @@ function Starfall() {
           <span className="eyebrow" id="dialogtag" />
           <h2 id="dialogtitle" />
           <p id="dialogtext" />
+          <div id="preferences" hidden>
+            <button id="sound">Sound: off</button>
+            <button id="quality">Graphics: Auto</button>
+          </div>
           <div id="levelbuttons" />
           <button className="primary" id="dialogaction" />
           <button className="textbutton" id="dialogback">
