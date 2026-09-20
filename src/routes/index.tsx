@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "stylesheet", href: "/starfall/style.css?v=3" },
+      { rel: "stylesheet", href: "/starfall/style.css?v=4" },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap",
@@ -39,7 +39,7 @@ function Starfall() {
     const s = document.createElement("script");
     s.type = "module";
     s.id = "starfall-engine";
-    s.src = "/starfall/game.js?v=3";
+    s.src = "/starfall/game.js?v=4";
     document.body.appendChild(s);
 
     return () => {
