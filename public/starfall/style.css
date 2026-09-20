@@ -17,6 +17,6 @@ header{padding:16px max(18px,env(safe-area-inset-right)) 12px max(18px,env(safe-
 
 /* Bright inscriptions — every label legible. */
 html,body,h1,h2,h3,p,span,small,b,strong,button,a,.eyebrow,.textbutton,.details,.scene-caption span,.scene-caption b,.mission h2,.mission p,.stats small,.vitals span,.desktop-hint,.panel p,.radar>span,.radar small,#sectorintro span,#levelbuttons small,#maptoggle,kbd{color:#eaf2ff}
-.intro p,.panel p,#sectorintro span,.mission p{color:#dbe6f7}
+.intro p,.panel p,#sectorintro span,.mission p,.details{color:#eef4ff}
 .brand span{color:#f3f6ff}
 h1 em,.mission>span,#sectorintro small,#levelbuttons .missionnumber,.resultstats strong,.panel .resultstars{color:var(--accent)}
